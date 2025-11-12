@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="testJs.js" defer></script>
+    <link rel="stylesheet" href="testWord.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <!-- 왼쪽: 퀴즈 영역 -->
+      <div class="quiz-container">
+        <div id="studentName"></div>
+
+        <!-- 문제 제목/문장 -->
+        <div class="label" id="questionLabel">학생</div>
+
+        <button class="one">1. student</button>
+        <button class="two">2. boy</button>
+        <button class="three">3. girl</button>
+        <button class="four">4. rose</button>
+        <button class="five">5. red</button>
+      </div>
+      <!-- 오른쪽: 정답 기록 영역 -->
+      <div class="answer-panel" style="display: none">
+        <h3>정답 관리</h3>
+        <table class="answer-table">
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>문제</th>
+              <!-- ⬅️ 여기 title(학생, 꽃...) -->
+              <th>선택한 답</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1번</td>
+              <td id="title-q1" class="question-title-cell"></td>
+              <td id="answer-q1" class="answer"></td>
+            </tr>
+            <tr>
+              <td>2번</td>
+              <td id="title-q2" class="question-title-cell"></td>
+              <td id="answer-q2" class="answer"></td>
+            </tr>
+            <tr>
+              <td>3번</td>
+              <td id="title-q3" class="question-title-cell"></td>
+              <td id="answer-q3" class="answer"></td>
+            </tr>
+            <tr>
+              <td>4번</td>
+              <td id="title-q4" class="question-title-cell"></td>
+              <td id="answer-q4" class="answer"></td>
+            </tr>
+            <tr>
+              <td>5번</td>
+              <td id="title-q5" class="question-title-cell"></td>
+              <td id="answer-q5" class="answer"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

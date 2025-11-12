@@ -1,0 +1,74 @@
+/* body는 이미 가운데 정렬 되어 있다고 가정 (네가 쓰던 코드 그대로) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  background: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 퀴즈 + 정답 패널을 감싸는 전체 레이아웃 */
+.page {
+  display: flex;
+  gap: 24px; /* 왼쪽/오른쪽 간격 */
+  align-items: flex-start;
+}
+
+/* 기존 quiz-container 스타일 그대로 활용 */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 24px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 360px;
+  box-sizing: border-box;
+}
+
+/* 오른쪽 정답 패널 */
+.answer-panel {
+  background: #ffffff;
+  padding: 16px 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+.answer-panel h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* 정답 테이블 스타일 */
+.answer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.answer-table th,
+.answer-table td {
+  border: 1px solid #e5e7eb;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.answer-table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+/* 정답 텍스트 칸 스타일 (원하면 색만 바꾸기) */
+.answer {
+  color: #111827;
+  font-weight: 600;
+}
