@@ -11,56 +11,46 @@
     <div class="page">
       <!-- 왼쪽: 퀴즈 영역 -->
       <div class="quiz-container">
-        <div id="studentName"></div>
+        <div id="timerBox">남은 시간: <span id="timer-sec">20</span>초</div>
 
-        <!-- 문제 제목/문장 -->
         <div class="label" id="questionLabel">학생</div>
 
-        <button class="one">1. student</button>
-        <button class="two">2. boy</button>
-        <button class="three">3. girl</button>
-        <button class="four">4. rose</button>
-        <button class="five">5. red</button>
+        <!-- 단어 이미지 영역 -->
+        <!-- <img id="questionImage" class="question-img" src="" alt="문제 이미지" /> -->
+
+        <div class="choice-row">
+          <button class="one">1. student</button>
+          <button class="two">2. boy</button>
+          <button class="three">3. girl</button>
+          <button class="four">4. rose</button>
+          <button class="five">5. red</button>
+        </div>
+        <div class="hint-text">
+          press <span class="kbd">SPACE</span> to proceed to the next question.
+        </div>
       </div>
-      <!-- 오른쪽: 정답 기록 영역 -->
+
       <div class="answer-panel" style="display: none">
-        <h3>정답 관리</h3>
+        <h3>시험 결과</h3>
+
+        <div class="result-summary">
+          <p>이름: <span id="result-name"></span></p>
+          <p>
+            점수: <span id="result-correct">0</span> /
+            <span id="result-total">0</span>
+          </p>
+          <p style="font-size: 12px; color: #6b7280">
+            * 빨간색으로 표시된 칸은 틀린 문제입니다.
+          </p>
+        </div>
+
+        <hr />
         <table class="answer-table">
           <thead>
-            <tr>
-              <th>번호</th>
-              <th>문제</th>
-              <!-- ⬅️ 여기 title(학생, 꽃...) -->
-              <th>선택한 답</th>
-            </tr>
+            ... (구분 / 1번~5번) ...
           </thead>
-          <tbody>
-            <tr>
-              <td>1번</td>
-              <td id="title-q1" class="question-title-cell"></td>
-              <td id="answer-q1" class="answer"></td>
-            </tr>
-            <tr>
-              <td>2번</td>
-              <td id="title-q2" class="question-title-cell"></td>
-              <td id="answer-q2" class="answer"></td>
-            </tr>
-            <tr>
-              <td>3번</td>
-              <td id="title-q3" class="question-title-cell"></td>
-              <td id="answer-q3" class="answer"></td>
-            </tr>
-            <tr>
-              <td>4번</td>
-              <td id="title-q4" class="question-title-cell"></td>
-              <td id="answer-q4" class="answer"></td>
-            </tr>
-            <tr>
-              <td>5번</td>
-              <td id="title-q5" class="question-title-cell"></td>
-              <td id="answer-q5" class="answer"></td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
+          <!-- tbody는 비워두기 -->
         </table>
       </div>
     </div>
