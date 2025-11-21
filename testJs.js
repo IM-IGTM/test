@@ -9,10 +9,11 @@ window.onload = function () {
   // 1. 문제 데이터 (정답 인덱스 포함)
   // -----------------------------
   const questions = [
+    // 문제 삭제를 원하면 {},까지 삭제
     {
       title: "이름",
       options: ["age", "name", "adult", "person", "join"],
-      correctIndex: 1,
+      correctIndex: 2,
       img: "img/name.jpg",
     },
     {
@@ -833,9 +834,24 @@ window.onload = function () {
     }
 
     // 결과 패널 보이기
+    //const answerPanel = document.querySelector(".answer-panel");
+    //if (answerPanel) {
+      //answerPanel.style.display = "block";
+    //}
+
+  }
+
+function resultOk(){
+  //결과 패널 클릭하기
     const answerPanel = document.querySelector(".answer-panel");
     if (answerPanel) {
       answerPanel.style.display = "block";
+    }
+  
+
+    const examOver = document.querySelector(".examOver");
+    if(examOver){
+      examOver.style.display = "block";
     }
 
     // 결과 데이터 채우기
@@ -846,7 +862,8 @@ window.onload = function () {
     if (resultName) resultName.textContent = studentNameValue;
     if (resultCorrect) resultCorrect.textContent = correctCount;
     if (resultTotal) resultTotal.textContent = questions.length;
-  }
+}
+  
 
   // -----------------------------
   // 문제 화면에 뿌리기
@@ -979,7 +996,7 @@ window.onload = function () {
   // -----------------------------
   document.addEventListener("click", function () {
     // 시험 끝난 뒤에 경고 끄고 싶으면 아래 줄에 조건 추가:
-    // if (currentQuestion >= questions.length) return;
+     if (currentQuestion >= questions.length) return;
     alert("⚠️ 경고: 허용되지 않은 키입니다!");
   });
 };
