@@ -9,11 +9,10 @@ window.onload = function () {
   // 1. 문제 데이터 (정답 인덱스 포함)
   // -----------------------------
   const questions = [
-    // 문제 삭제를 원하면 {},까지 삭제
     {
       title: "이름",
       options: ["age", "name", "adult", "person", "join"],
-      correctIndex: 2,
+      correctIndex: 1,
       img: "img/name.jpg",
     },
     {
@@ -749,7 +748,7 @@ window.onload = function () {
   let countdownInterval = null;
 
   let correctCount = 0; // 맞힌 개수
-  const wrongList = []; // (원하면 쓸 수 있는) 틀린 문제 번호 리스트
+  const wrongList = []; // 틀린 문제 번호 리스트 (현재는 CSS로만 표시)
 
   const questionLabel = document.getElementById("questionLabel");
   const btn1 = document.querySelector(".one");
@@ -759,7 +758,7 @@ window.onload = function () {
   const btn5 = document.querySelector(".five");
   const buttons = [btn1, btn2, btn3, btn4, btn5];
 
-  const timerSpan = document.getElementById("timer-sec"); // 남은 시간 표시용 (없으면 undefined)
+  const timerSpan = document.getElementById("timer-sec"); // 남은 시간 표시용
 
   // -----------------------------
   // 타이머 표시 업데이트
@@ -807,7 +806,7 @@ window.onload = function () {
       answerCell.classList.add("wrong-cell"); // 틀린 칸 빨간색 표시
     }
 
-    wrongList.push(questionNumber); // 필요하면 활용 가능
+    wrongList.push(questionNumber);
 
     currentQuestion++;
 
@@ -819,7 +818,7 @@ window.onload = function () {
   }
 
   // -----------------------------
-  // 시험 종료 처리 (결과 페이지 표시)
+  // 시험 종료 처리 (시험 종료 문구만 보여줌)
   // -----------------------------
   function finishExam() {
     // 타이머 정지
@@ -833,37 +832,12 @@ window.onload = function () {
       quizContainer.style.display = "none";
     }
 
-    // 결과 패널 보이기
-    //const answerPanel = document.querySelector(".answer-panel");
-    //if (answerPanel) {
-      //answerPanel.style.display = "block";
-    //}
-
-  }
-
-function resultOk(){
-  //결과 패널 클릭하기
-    const answerPanel = document.querySelector(".answer-panel");
-    if (answerPanel) {
-      answerPanel.style.display = "block";
-    }
-  
-
+    // "시험 종료" 패널 보여주기
     const examOver = document.querySelector(".examOver");
-    if(examOver){
+    if (examOver) {
       examOver.style.display = "block";
     }
-
-    // 결과 데이터 채우기
-    const resultName = document.getElementById("result-name");
-    const resultCorrect = document.getElementById("result-correct");
-    const resultTotal = document.getElementById("result-total");
-
-    if (resultName) resultName.textContent = studentNameValue;
-    if (resultCorrect) resultCorrect.textContent = correctCount;
-    if (resultTotal) resultTotal.textContent = questions.length;
-}
-  
+  }
 
   // -----------------------------
   // 문제 화면에 뿌리기
@@ -883,10 +857,10 @@ function resultOk(){
       questionLabel.textContent = q.title;
     }
 
-    // 이미지 표시
+    // (이미지 쓰고 싶으면 HTML에 <img id="questionImage"> 주석 풀고 사용)
     const imgTag = document.getElementById("questionImage");
-    if (imgTag) {
-      imgTag.src = q.img; // ← 이미지 파일 교체
+    if (imgTag && q.img) {
+      imgTag.src = q.img;
     }
 
     // 보기 1~5
@@ -983,8 +957,6 @@ function resultOk(){
           btn.classList.remove("selected");
         }
       });
-
-      // 여기서는 문제 넘어가지 않음!
     } else {
       // 그 외 키
       alert("⚠️ 경고: 허용되지 않은 키입니다!");
@@ -992,11 +964,67 @@ function resultOk(){
   });
 
   // -----------------------------
-  // 마우스를 클릭했을 때도 경고 표시 (마우스 금지)
+  // 마우스를 클릭했을 때도 경고 표시 (퀴즈 진행 중에만)
   // -----------------------------
-  document.addEventListener("click", function () {
-    // 시험 끝난 뒤에 경고 끄고 싶으면 아래 줄에 조건 추가:
-     if (currentQuestion >= questions.length) return;
+  document.addEventListener("click", function (event) {
+    // 시험이 이미 끝난 뒤에는 마우스 허용 (결과보기 버튼 눌러야 하니까)
+    if (currentQuestion >= questions.length) return;
     alert("⚠️ 경고: 허용되지 않은 키입니다!");
   });
+
+  // -----------------------------
+  // 3. 결과보기 버튼 (전역 함수로 노출)
+  // -----------------------------
+  window.resultOk = function () {
+    // 시험 종료 문구 숨기기
+    const examOver = document.querySelector(".examOver");
+    if (examOver) {
+      examOver.style.display = "none";
+    }
+
+    // 정답 패널 보이기
+    const answerPanel = document.querySelector(".answer-panel");
+    if (answerPanel) {
+      answerPanel.style.display = "block";
+    }
+
+    // 결과 데이터 채우기
+    const resultName = document.getElementById("result-name");
+    const resultCorrect = document.getElementById("result-correct");
+    const resultTotal = document.getElementById("result-total");
+
+    if (resultName) resultName.textContent = studentNameValue;
+    if (resultCorrect) resultCorrect.textContent = correctCount;
+    if (resultTotal) resultTotal.textContent = questions.length;
+
+    // -------------------------
+    // 정답 화면을 PDF로 저장
+    // -------------------------
+    const answerPanelEl = document.querySelector(".answer-panel");
+    if (!answerPanelEl) return;
+
+    // 살짝 그려질 시간 주기
+    setTimeout(() => {
+      html2canvas(answerPanelEl).then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF("p", "mm", "a4");
+
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+        pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+
+        const d = new Date();
+        const yyyy = d.getFullYear();
+        const mm = String(d.getMonth() + 1).padStart(2, "0");
+        const dd = String(d.getDate()).padStart(2, "0");
+        const dateStr = `${yyyy}${mm}${dd}`;
+
+        const safeName = (studentNameValue || "이름없음").replace(/\s+/g, "_");
+
+        pdf.save(`${dateStr}_${safeName}_결과.pdf`);
+      });
+    }, 500);
+  };
 };

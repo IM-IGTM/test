@@ -400,3 +400,52 @@ body {
   object-fit: contain;
   margin: 10px 0 15px;
 }
+
+/* 시험 종료 문구 박스 */
+.examOver {
+  display: none; /* JS에서 block으로 켜줌 */
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  text-align: center;
+  margin-left: 24px; /* 퀴즈 박스랑 약간 띄우기 */
+}
+
+.examOver p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* 결과보기 버튼 */
+.resultOk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.45);
+  transition: transform 0.08s ease, box-shadow 0.12s ease, opacity 0.15s ease;
+}
+
+.resultOk:hover {
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.55);
+  opacity: 0.96;
+}
+
+.resultOk:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+}

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="testJs.js" defer></script>
+    <!-- PDF 생성용 라이브러리 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <link rel="stylesheet" href="testWord.css" />
     <title>Document</title>
   </head>
@@ -31,8 +35,12 @@
       </div>
 
       <div class="examOver" style="display: none">
-        <p style="font-size: 20px; color: #0000ff">수고하셨습니다. 시험이 종료되었습니다.</p>
-        <button class="resultOk" id="resultOk" onClick="resultOk()">결과보기</button>
+        <p style="font-size: 20px; color: #0000ff">
+          수고하셨습니다. 시험이 종료되었습니다.
+        </p>
+        <button class="resultOk" id="resultOk" onClick="resultOk()">
+          결과보기
+        </button>
       </div>
       <div class="answer-panel" style="display: none">
         <h3>시험 결과</h3>
@@ -50,8 +58,7 @@
 
         <hr />
         <table class="answer-table">
-          <thead>
-          </thead>
+          <thead></thead>
           <tbody></tbody>
           <!-- tbody는 비워두기 -->
         </table>
