@@ -1,17 +1,31 @@
 function startTest() {
-  var studentName = document.getElementById("studentName").value;
-  window.location.href =
-    "./startTest.html" + "?" + "studentName=" + encodeURIComponent(studentName);
+  // 입력한 이름 가져오기
+  const input = document.getElementById("studentName");
+  const name = input.value.trim();
+
+  if (!name) {
+    alert("이름을 입력해 주세요.");
+    input.focus();
+    return;
+  }
+
+  // URL에 이름을 쿼리스트링으로 붙여서 이동
+  const encodedName = encodeURIComponent(name);
+  window.location.href = `wmBasic/startTest.html?studentName=${encodedName}`;
 }
 
-// 페이지 로드 후 이벤트 등록
-window.onload = function () {
+function preStartTest() {
+  // 입력한 이름 가져오기
   const input = document.getElementById("studentName");
+  const name = input.value.trim();
 
-  input.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault(); // 기본 엔터 동작(폼 제출 등) 막기
-      startTest(); // 버튼 클릭 대신 이 함수 호출
-    }
-  });
-};
+  if (!name) {
+    alert("이름을 입력해 주세요.");
+    input.focus();
+    return;
+  }
+
+  // URL에 이름을 쿼리스트링으로 붙여서 이동
+  const encodedName = encodeURIComponent(name);
+  window.location.href = `preStarter/preStarter.html?studentName=${encodedName}`;
+}
