@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="testJs.js" defer></script>
+    <link rel="stylesheet" href="testWord.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="exam-page">
+      <!-- 왼쪽: 키 설명 패널 -->
+      <aside class="control-panel">
+        <div class="badge-running">시험진행</div>
+
+        <div class="control-section">
+          <div class="control-title">상단 숫자키: 문제선택</div>
+          <div class="control-keys">
+            <div class="key-box">
+              <div class="key-top">1 !</div>
+              <div class="key-bottom">1</div>
+            </div>
+            <div class="key-box">
+              <div class="key-top">2 @</div>
+              <div class="key-bottom">2</div>
+            </div>
+            <div class="key-box">
+              <div class="key-top">3 #</div>
+              <div class="key-bottom">3</div>
+            </div>
+            <div class="key-box">
+              <div class="key-top">4 $</div>
+              <div class="key-bottom">4</div>
+            </div>
+            <div class="key-box">
+              <div class="key-top">5 %</div>
+              <div class="key-bottom">5</div>
+            </div>
+          </div>
+
+          <div class="control-title mt-24">space 키: 다음 문제</div>
+          <div class="space-box">SPACE</div>
+        </div>
+      </aside>
+
+      <!-- 오른쪽: 실제 시험 화면 -->
+      <main class="test-panel">
+        <!-- 상단 헤더 -->
+        <header class="test-header">
+          <div class="timer">
+            <div class="timer-icon">⏱</div>
+            <div class="timer-text"><span id="timer-sec">14</span> s</div>
+          </div>
+          <div class="question-number">
+            <span id="question-index">01</span>
+          </div>
+          <div class="instruction">
+            Choose the correct word for the meaning provided in Korean.
+          </div>
+        </header>
+
+        <!-- 문제 카드 -->
+        <section class="question-card">
+          <div id="studentName" class="student-name"></div>
+
+          <div id="questionLabel" class="question-kor">학생</div>
+
+          <div class="choices-row">
+            <button class="choice-btn one">
+              <span class="choice-index">1</span>
+              <span class="choice-text">student</span>
+            </button>
+            <button class="choice-btn two">
+              <span class="choice-index">2</span>
+              <span class="choice-text">boy</span>
+            </button>
+            <button class="choice-btn three">
+              <span class="choice-index">3</span>
+              <span class="choice-text">girl</span>
+            </button>
+            <button class="choice-btn four">
+              <span class="choice-index">4</span>
+              <span class="choice-text">rose</span>
+            </button>
+            <button class="choice-btn five">
+              <span class="choice-index">5</span>
+              <span class="choice-text">red</span>
+            </button>
+          </div>
+
+          <div class="hint-text">
+            press <span class="kbd">SPACE</span> to proceed to the next
+            question.
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
