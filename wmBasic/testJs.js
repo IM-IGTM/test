@@ -89,36 +89,63 @@ window.onload = function () {
 
   // 1-3) 문장 빈칸 채우기 (영어 표현 4지선다)
   const sentencePairs = [
-    ["I __________ dog training.", "be interested in"],
-    ["It  ___s ___ a big snake.", "look like"],
-    ["Leave me  __________.", "alone"],
-    ["__________ your mother.", "say hello to"],
-    ["An __________  person.", "honest"],
-    ["He is trying to lose __________.", "weight"],
-    ["Mary has her  __________ blog.", "own"],
-    ["They __________  sandwiches and fruit.", "bring"],
-    ["natural ______________", "environment"],
-    ["She loooks  __________.", "thin"],
-    ["a __________ city.", "strange"],
-    ["I __________ .", "promise"],
-    ["__________ your idea.", "accept"],
-    ["A __________  child.", "polite"],
-    ["Rabbit __________  of his speed.", "be proud of"],
-    ["a famous __________.", "person"],
-    ["Do you want to __________ new things?", "find out"],
-    ["__________ my friends.", "introduce"],
-    ["We __________ too many cups.", "use"],
-    ["I get up __________.", "early"],
-    ["A middle school __________ .", "student"],
-    ["He __________  late.", "show up"],
-    ["__________ a ball.", "throw"],
-    ["become an __________.", "adult"],
-    ["__________ to be a singer.", "decide"],
-    ["He __________ed new marine animals.", "discover"],
-    ["an old  __________.", "friendship"],
-    ["__________ the 16th century.", "until"],
-    ["My favorite __________ is science.", "subject"],
-    ["Hanji is a _____________________ Korean paper.", "traditional"],
+    [
+      "I __________ dog training.\n 나는 개 훈련에 관심이 있다.",
+      "be interested in",
+    ],
+    ["It  ___ ___ a big snake.\n 그것은 큰 뱀처럼 보인다.", "look like"],
+    ["Leave me  __________.\n 날 혼자 내버려둬.", "alone"],
+    ["__________ your mother.\n 너의 어머니께 안부를 전해 줘", "say hello to"],
+    ["An __________  person.\n 정직한 사람", "honest"],
+    [
+      "He is trying to lose __________.\n 그는 체중을 줄이려고 노력하고 있다.",
+      "weight",
+    ],
+    [
+      "Mary has her  __________ blog.\n Mary는 그녀 자신의 블로그를 가지고 있다.",
+      "own",
+    ],
+    [
+      "They __________  sandwiches and fruit.\n 그들은 샌드위치와 과일을 가져온다.",
+      "bring",
+    ],
+    ["natural ______________\n 자연 환경", "environment"],
+    ["She loooks  __________.\n 그 상자 안에는 아무것도 없다.", "thin"],
+    ["a __________ city.\n 낯선 도시", "strange"],
+    ["I __________ .\n 내가 약속할게", "promise"],
+    ["__________ your idea.\n 너의 생각을 받아들이다.", "accept"],
+    ["A __________  child.\n 예의 바른 어린이", "polite"],
+    [
+      "Rabbit __________  of his speed.\n 토끼는 그의 빠름을 자랑스러워했다.",
+      "be proud of",
+    ],
+    ["a famous __________.\n 유명한 사람", "person"],
+    [
+      "Do you want to __________ new things?\n 너는 새로운 것을 발견하길 원하니?",
+      "find out",
+    ],
+    ["__________ my friends.\n 내 친구들을 소개하다.", "introduce"],
+    ["We __________ too many cups.\n 우리는 너무 많은 컵을 사용한다.", "use"],
+    ["I get up __________.\n 나는 일찍 일어난다.", "early"],
+    ["A middle school __________ .\n 중학생", "student"],
+    ["He __________  late.\n 그녀의 감정을 드러내다.", "show up"],
+    ["__________ a ball.\n 공을 던지다.", "throw"],
+    ["become an __________.\n 어른이 되다.", "adult"],
+    ["__________ to be a singer.\n 가수가 되기로 결심하다.", "decide"],
+    [
+      "He __________ed new marine animals.\n 그는 새로운 해양 동물을 발견했다.",
+      "discover",
+    ],
+    ["an old  __________.\n 오랜 우정", "friendship"],
+    ["__________ the 16th century.\n 16세기 까지", "until"],
+    [
+      "My favorite __________ is science.\n 내가 가장 좋아하는 과목은 과학이다.",
+      "subject",
+    ],
+    [
+      "Hanji is a _____________________ Korean paper.\n 한지는 전통적인 한국 종이이다.",
+      "traditional",
+    ],
   ];
 
   // =============================
@@ -427,6 +454,18 @@ window.onload = function () {
   // 13. 결과보기 버튼 (전역 함수)
   // =============================
   window.resultOk = function () {
+    // 비밀번호 확인 (1234)
+    const inputPwd = prompt("결과를 보려면 비밀번호를 입력하세요:");
+
+    if (inputPwd === null) {
+      alert("취소되었습니다.");
+      return;
+    }
+
+    if (inputPwd !== "1234") {
+      alert("비밀번호가 올바르지 않습니다!");
+      return;
+    }
     const examOver = document.querySelector(".examOver");
     if (examOver) examOver.style.display = "none";
 
