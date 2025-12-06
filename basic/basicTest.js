@@ -138,36 +138,84 @@ window.onload = function () {
   // 4. 3유형: 문장 보고 영어 고르기 (71~100번)
   // ===============================
   const sentencePairs = [
-    ["Poverty is a ________ of her novel.", "theme"],
-    ["Today we'll paint using your ________.", "palm"],
-    ["And now, ________ me.", "follow"],
-    ["________ takes in water from the ground.", "root"],
-    ["The ________ students wanted to play soccer.", "male"],
-    ["There is a ________ of water.", "bottle"],
-    ["Where is your ________.", "hometown"],
-    ["He usually takes his ________.", "dictionary"],
-    ["The ________ was delicious.", "meal"],
-    ["His game beame p_______ .", "popular"],
-    ["I'd like a bowl of m_______ soup.", "mushroom"],
-    ["It was a good p_______ .", "price"],
-    ["He came on s_______ .", "stage"],
-    ["We'll fix all the f_______s around the farm.", "fence"],
-    ["Please take the l_______ out of my hamburger.", "lettuce"],
-    ["What p_______ are the reviews likely for?", "product"],
-    ["We have gone through the development of t_______ .", "technology"],
-    ["I'll drop by a g_______ store.", "grocery"],
-    ["You should h_______ this machine with care.", "handle"],
-    ["What does the l_______ ask swimmers to do?", "lifeguard"],
-    ["She likes n_______ .", "noodle"],
-    ["The shoes are too t_______ for him.", "tiny"],
-    ["This c_______ is on a hill.", "castle"],
-    ["Do not share your p_______ with others.", "password"],
-    ["I'm c_______ing a lot today.", "cough"],
-    ["E_______ for 14-16 age group.", "education"],
-    ["The bird has a shiny black b_______ .", "beak"],
-    ["Before you camp, r_______ the rule.", "remember"],
-    ["The house with c_______ was built in 1970.", "chimney"],
-    ["I need to buy a new p_______ .", "pillow"],
+    [
+      "Poverty is a ________ of her novel.\n가난은 그녀가 쓴 소설의 주제이다.",
+      "theme",
+    ],
+    [
+      "Today we'll paint using your ________.\n 오늘 우리는 손바닥을 이용해서 그림을 그릴 것이다.",
+      "palm",
+    ],
+    ["And now, ________ me.\n지시 사항을 세심히 따르세요.", "follow"],
+    [
+      "________ takes in water from the ground.\n뿌리는 땅으로부터 물을 흡수한다.",
+      "root",
+    ],
+    [
+      "The ________ students wanted to play soccer.\n남학생들은 축구를 하고싶어 했다.",
+      "male",
+    ],
+    ["There is a ________ of water.\n물 한 병이 있다.", "bottle"],
+    ["Where is your ________.\n너의 고향이 어디니?", "hometown"],
+    [
+      "He usually takes his ________.\n그는 보통 그의 사전을 들고 다닌다.",
+      "dictionary",
+    ],
+    ["The ________ was delicious.\n그 식사는 맛있었다.", "meal"],
+    ["His game beame _______ .\n그의 게임은 인기 있어졌다.", "popular"],
+    ["I'd like a bowl of _______ soup.\n저는 버섯 스프로 할게요.", "mushroom"],
+    ["It was a good _______ .\n그것은 적절한 가격이었다.", "price"],
+    ["He came on _______ .\n그가 무대에 올라왔다.", "stage"],
+    [
+      "We'll fix all the _______s around the farm.\n우리는 농장 주위의 모든 울타리들을 고칠 것이다.",
+      "fence",
+    ],
+    [
+      "Please take the _______ out of my hamburger.\n제 햄버거에서 양상추를 빼주세요.",
+      "lettuce",
+    ],
+    [
+      "What _______ are the reviews likely for?\n리뷰들은 어떤 제품을 위한 것 같은가?",
+      "product",
+    ],
+    [
+      "We have gone through the development of _______ .\n우리는 기술의 발저을 겪어왔다.",
+      "technology",
+    ],
+    [
+      "I'll drop by a _______ store.\n나는 식료품점에 잠깐 들를 것이다.",
+      "grocery",
+    ],
+    [
+      "You should _______ this machine with care.\n이 기계를 소중히 다루어야 한다.",
+      "handle",
+    ],
+    [
+      "What does the _______ ask swimmers to do?\n안전요원이 수영하는 사람들에게 무엇을 요청하는가?",
+      "lifeguard",
+    ],
+    ["She likes _______ .\n 그녀는 국수를 좋아한다.", "noodle"],
+    ["The shoes are too _______ for him.\n그 신발은 그에게 너무 작다.", "tiny"],
+    ["This _______ is on a hill.\n이 성은 언덕 위에 있다.", "castle"],
+    [
+      "Do not share your _______ with others.\n다른 사람들과 당신의 비밀번호를 공유하지 마세요.",
+      "password",
+    ],
+    ["I'm _______ing a lot today.\n나는 오늘 기침을 많이 한다.", "cough"],
+    ["_______ for 14-16 age group.\n14-16세 연령대를 위한 교육", "education"],
+    [
+      "The bird has a shiny black _______ .\n그 새는 빛나는 검은 부리를 가지고 있다.",
+      "beak",
+    ],
+    [
+      "Before you camp, _______ the rule.\n캠핑 하기 전에, 규칙을 기억해라.",
+      "remember",
+    ],
+    [
+      "The house with _______ was built in 1970.\n굴뚝이 있는 그 집은 1970년에 지어졌다.",
+      "chimney",
+    ],
+    ["I need to buy a new _______ .\n수영장에서 나가 주세요.", "pillow"],
   ];
 
   const allSentAnswers = sentencePairs.map(([, ans]) => ans);
@@ -428,6 +476,19 @@ window.onload = function () {
   // 13. 결과보기 버튼 (전역 함수)
   // =============================
   window.resultOk = function () {
+    // 비밀번호 확인 (1234)
+    const inputPwd = prompt("결과를 보려면 비밀번호를 입력하세요:");
+
+    if (inputPwd === null) {
+      alert("취소되었습니다.");
+      return;
+    }
+
+    if (inputPwd !== "1234") {
+      alert("비밀번호가 올바르지 않습니다!");
+      return;
+    }
+
     const examOver = document.querySelector(".examOver");
     if (examOver) examOver.style.display = "none";
 
