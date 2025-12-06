@@ -651,6 +651,18 @@ window.onload = function () {
   // 16. 결과보기 버튼 (전역 함수)
   // -----------------------------
   window.resultOk = function () {
+    // 비밀번호 확인 (1234)
+    const inputPwd = prompt("결과를 보려면 비밀번호를 입력하세요:");
+
+    if (inputPwd === null) {
+      alert("취소되었습니다.");
+      return;
+    }
+
+    if (inputPwd !== "1234") {
+      alert("비밀번호가 올바르지 않습니다!");
+      return;
+    }
     const examOver = document.querySelector(".examOver");
     if (examOver) {
       examOver.style.display = "none";
