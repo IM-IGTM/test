@@ -1,4 +1,4 @@
-function startTest() {
+function wmBasic() {
   // 입력한 이름 가져오기
   const input = document.getElementById("studentName");
   const name = input.value.trim();
