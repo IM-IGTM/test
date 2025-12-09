@@ -13,252 +13,252 @@ window.onload = function () {
   const pictureQuestionsSeed = [
     {
       title: "꿈, 꿈을 꾸다",
-      options: ["always", "leader", "live", "pizza", "dream"],
+      options: ["always", "leader", "live", "dream"],
       img: "img/dream.png",
     },
     {
       title: "항상",
-      options: ["dream", "leader", "fun", "snowman", "always"],
+      options: ["dream", "leader", "fun", "always"],
       img: "img/always.png",
     },
     {
       title: "지도자",
-      options: ["student", "talk", "roll", "today", "leader"],
+      options: ["student", "talk", "today", "leader"],
       img: "img/leader.png",
     },
     {
       title: "살다",
-      options: ["learn", "stay", "get", "wait", "live"],
+      options: ["learn", "get", "wait", "live"],
       img: "img/live.png",
     },
     {
       title: "맛있는",
-      options: ["new", "warm", "best", "some", "delicious"],
+      options: ["new", "warm", "best", "delicious"],
       img: "img/delicious.png",
     },
     {
       title: "피자",
-      options: ["museum", "boat", "vegetable", "bedroom", "pizza"],
+      options: ["museum", "vegetable", "bedroom", "pizza"],
       img: "img/pizza.png",
     },
     {
       title: "새로운",
-      options: ["old", "clean", "some", "together", "new"],
+      options: ["old", "clean", "together", "new"],
       img: "img/new.png",
     },
     {
       title: "공원",
-      options: ["hospital", "bedroom", "baker", "table", "park"],
+      options: ["hospital", "baker", "table", "park"],
       img: "img/park.png",
     },
     {
       title: "가르치다",
-      options: ["learn", "talk", "show", "carry", "teach"],
+      options: ["learn", "talk", "carry", "teach"],
       img: "img/teach.png",
     },
     {
       title: "깨끗한, 청소하다",
-      options: ["dirty", "warm", "stay", "hospital", "clean"],
+      options: ["dirty", "warm", "hospital", "clean"],
       img: "img/clean.png",
     },
     {
       title: "가끔, 때때로",
-      options: ["always", "today", "best", "many", "sometimes"],
+      options: ["always", "best", "many", "sometimes"],
       img: "img/sometimes.png",
     },
     {
       title: "즐거운, 재미",
-      options: ["sad", "talk", "roll", "wait", "fun"],
+      options: ["sad", "talk", "wait", "fun"],
       img: "img/fun.png",
     },
     {
       title: "~위에",
-      options: ["under", "from", "some", "outside", "over"],
+      options: ["under", "from", "outside", "over"],
       img: "img/over.png",
     },
     {
       title: "배, 보트",
-      options: ["train", "museum", "hospital", "park", "boat"],
+      options: ["train", "museum", "park", "boat"],
       img: "img/boat.png",
     },
     {
       title: "외부의, 바깥쪽",
-      options: ["inside", "together", "from", "over", "outside"],
+      options: ["inside", "together", "over", "outside"],
       img: "img/outside.png",
     },
     {
       title: "안경",
-      options: ["teeth", "ring", "bedroom", "vegetable", "glasses"],
+      options: ["teeth", "ring", "vegetable", "glasses"],
       img: "img/glasses.png",
     },
     {
       title: "욕실",
-      options: ["kitchen", "hospital", "bedroom", "museum", "bathroom"],
+      options: ["kitchen", "bedroom", "museum", "bathroom"],
       img: "img/bathroom.png",
     },
     {
       title: "기차, 열차",
-      options: ["boat", "car", "hospital", "table", "train"],
+      options: ["boat", "car", "hospital", "train"],
       img: "img/train.png",
     },
     {
       title: "배우다",
-      options: ["teach", "get", "show", "stay", "learn"],
+      options: ["teach", "get", "show", "learn"],
       img: "img/learn.png",
     },
     {
       title: "박물관",
-      options: ["school", "hospital", "park", "bedroom", "museum"],
+      options: ["school", "hospital", "bedroom", "museum"],
       img: "img/museum.png",
     },
     {
       title: "무지개",
-      options: ["snowman", "vegetable", "some", "warm", "rainbow"],
+      options: ["snowman", "some", "warm", "rainbow"],
       img: "img/rainbow.png",
     },
     {
       title: "최고의",
-      options: ["many", "some", "new", "fun", "best"],
+      options: ["many", "some", "new", "best"],
       img: "img/best.png",
     },
     {
       title: "이야기하다",
-      options: ["speak", "learn", "teach", "show", "talk"],
+      options: ["speak", "learn", "show", "talk"],
       img: "img/talk.png",
     },
     {
       title: "학생",
-      options: ["kid", "baker", "leader", "teacher", "student"],
+      options: ["kid", "baker", "leader", "student"],
       img: "img/student.png",
     },
     {
       title: "구르다",
-      options: ["run", "walk", "carry", "put", "roll"],
+      options: ["run", "walk", "carry", "roll"],
       img: "img/roll.png",
     },
     {
       title: "이 (tooth의 복수)",
-      options: ["mouth", "finger", "lip", "vegetable", "teeth"],
+      options: ["mouth", "finger", "lip", "teeth"],
       img: "img/teeth.png",
     },
     {
       title: "입고 있다",
-      options: ["put", "carry", "roll", "wait", "wear"],
+      options: ["put", "carry", "roll", "wear"],
       img: "img/wear.png",
     },
     {
       title: "눈사람",
-      options: ["rainbow", "kid", "rabbit", "museum", "snowman"],
+      options: ["rainbow", "kid", "museum", "snowman"],
       img: "img/snowman.png",
     },
     {
       title: "야채, 채소",
-      options: ["fruit", "pizza", "meal", "some", "vegetable"],
+      options: ["fruit", "pizza", "meal", "vegetable"],
       img: "img/vegetable.png",
     },
     {
       title: "병원",
-      options: ["school", "kitchen", "museum", "park", "hospital"],
+      options: ["school", "kitchen", "museum", "hospital"],
       img: "img/hospital.png",
     },
     {
       title: "함께, 같이",
-      options: ["alone", "outside", "best", "some", "together"],
+      options: ["alone", "outside", "best", "together"],
       img: "img/together.png",
     },
     {
       title: "제빵사",
-      options: ["student", "teacher", "kid", "doctor", "baker"],
+      options: ["student", "teacher", "doctor", "baker"],
       img: "img/baker.png",
     },
     {
       title: "침실",
-      options: ["kitchen", "bathroom", "living room", "hospital", "bedroom"],
+      options: ["kitchen", "living room", "hospital", "bedroom"],
       img: "img/bedroom.png",
     },
     {
       title: "울리다",
-      options: ["call", "talk", "show", "wait", "ring"],
+      options: ["call", "talk", "show", "ring"],
       img: "img/ring.png",
     },
     {
       title: "~에서(부터)",
-      options: ["over", "together", "outside", "today", "from"],
+      options: ["over", "together", "outside", "from"],
       img: "img/from.png",
     },
     {
       title: "누워 있다, 눕다",
-      options: ["live", "sleep", "stay", "wait", "lie"],
+      options: ["live", "sleep", "stay", "lie"],
       img: "img/lie.png",
     },
     {
       title: "동물",
-      options: ["student", "kid", "rabbit", "turtle", "animal"],
+      options: ["student", "kid", "turtle", "animal"],
       img: "img/animal.png",
     },
     {
       title: "식탁",
-      options: ["bed", "desk", "kitchen", "some", "table"],
+      options: ["bed", "desk", "kitchen", "table"],
       img: "img/table.png",
     },
     {
       title: "몇몇의, 일부의",
-      options: ["many", "best", "together", "warm", "some"],
+      options: ["many", "best", "warm", "some"],
       img: "img/some.png",
     },
     {
       title: "제발",
-      options: ["today", "always", "thanks", "sorry", "please"],
+      options: ["today", "always", "sorry", "please"],
       img: "img/please.png",
     },
     {
       title: "들고 있다, 나르다",
-      options: ["put", "roll", "get", "wear", "carry"],
+      options: ["put", "roll", "get", "carry"],
       img: "img/carry.png",
     },
     {
       title: "머무르다",
-      options: ["stay", "go", "get", "roll", "stay"],
+      options: ["stay", "go", "get", "stay"],
       img: "img/stay.png",
     },
     {
       title: "받다, 얻다",
-      options: ["put", "take", "show", "carry", "get"],
+      options: ["put", "take", "show", "get"],
       img: "img/get.png",
     },
     {
       title: "과학",
-      options: ["art", "math", "museum", "school", "science"],
+      options: ["art", "math", "school", "science"],
       img: "img/science.png",
     },
     {
       title: "보여주다",
-      options: ["talk", "teach", "learn", "get", "show"],
+      options: ["talk", "teach", "get", "show"],
       img: "img/show.png",
     },
     {
       title: "많은",
-      options: ["some", "little", "few", "best", "many"],
+      options: ["some", "little", "best", "many"],
       img: "img/many.png",
     },
     {
       title: "오늘",
-      options: ["nowadays", "sometimes", "always", "warm", "today"],
+      options: ["nowadays", "sometimes", "warm", "today"],
       img: "img/today.png",
     },
     {
       title: "따뜻한",
-      options: ["hot", "cold", "new", "best", "warm"],
+      options: ["hot", "cold", "new", "warm"],
       img: "img/warm.png",
     },
     {
       title: "놓다, 두다",
-      options: ["get", "carry", "wear", "roll", "put"],
+      options: ["get", "carry", "roll", "put"],
       img: "img/put.png",
     },
     {
       title: "기다리다",
-      options: ["get", "stay", "roll", "ring", "wait"],
+      options: ["get", "stay", "roll", "wait"],
       img: "img/wait.png",
     },
   ];
@@ -364,7 +364,7 @@ window.onload = function () {
     let options = [kor];
     let wrong = allKorean.filter((k) => k !== kor);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -384,7 +384,7 @@ window.onload = function () {
     let options = [eng];
     let wrong = allEnglishKorSet.filter((e) => e !== eng);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -412,7 +412,7 @@ window.onload = function () {
     tbody.innerHTML = "";
 
     const totalQuestions = questions.length;
-    const groupSize = 5;
+    const groupSize = 4;
     const groupCount = Math.ceil(totalQuestions / groupSize);
 
     for (let g = 0; g < groupCount; g++) {
@@ -464,8 +464,7 @@ window.onload = function () {
   const btn2 = document.querySelector(".two");
   const btn3 = document.querySelector(".three");
   const btn4 = document.querySelector(".four");
-  const btn5 = document.querySelector(".five");
-  const buttons = [btn1, btn2, btn3, btn4, btn5];
+  const buttons = [btn1, btn2, btn3, btn4];
 
   const timerSpan = document.getElementById("timer-sec");
 
@@ -614,7 +613,7 @@ window.onload = function () {
   // -----------------------------
   // 14. 키보드 입력 (1~5 / Space)
   // -----------------------------
-  const keyToIndex = { 1: 0, 2: 1, 3: 2, 4: 3, 5: 4 };
+  const keyToIndex = { 1: 0, 2: 1, 3: 2, 4: 3 };
 
   document.addEventListener("keydown", function (event) {
     if (currentQuestion >= questions.length) return;
@@ -622,7 +621,7 @@ window.onload = function () {
     if (event.code === "Space") {
       event.preventDefault();
       if (selectedIndex === null) {
-        alert("먼저 1~5 중 하나를 선택하세요.");
+        alert("먼저 1~4 중 하나를 선택하세요.");
         return;
       }
       handleAnswer(selectedIndex);
