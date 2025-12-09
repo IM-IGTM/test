@@ -63,7 +63,7 @@ window.onload = function () {
     let options = [eng];
     let wrong = allEng1.filter((e) => e !== eng);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -122,7 +122,7 @@ window.onload = function () {
     let options = [kor];
     let wrong = allKor2.filter((k) => k !== kor);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -224,7 +224,7 @@ window.onload = function () {
     let options = [ans];
     let wrong = allSentAnswers.filter((a) => a !== ans);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -255,7 +255,7 @@ window.onload = function () {
   if (tbody) {
     tbody.innerHTML = "";
     const totalQuestions = questions.length; // 100
-    const groupSize = 5;
+    const groupSize = 4;
     const groupCount = Math.ceil(totalQuestions / groupSize);
 
     for (let g = 0; g < groupCount; g++) {
@@ -309,8 +309,7 @@ window.onload = function () {
   const btn2 = document.querySelector(".two");
   const btn3 = document.querySelector(".three");
   const btn4 = document.querySelector(".four");
-  const btn5 = document.querySelector(".five");
-  const buttons = [btn1, btn2, btn3, btn4, btn5];
+  const buttons = [btn1, btn2, btn3, btn4];
 
   const timerSpan = document.getElementById("timer-sec");
   const imgTag = document.getElementById("questionImage"); // 있어도 되고 없어도 됨
@@ -436,7 +435,7 @@ window.onload = function () {
   // =============================
   // 11. 키보드 입력 (1~5 / Space)
   // =============================
-  const keyToIndex = { 1: 0, 2: 1, 3: 2, 4: 3, 5: 4 };
+  const keyToIndex = { 1: 0, 2: 1, 3: 2, 4: 3 };
 
   document.addEventListener("keydown", function (event) {
     if (currentQuestion >= questions.length) return;
@@ -444,7 +443,7 @@ window.onload = function () {
     if (event.code === "Space") {
       event.preventDefault();
       if (selectedIndex === null) {
-        alert("먼저 1~5 중 하나를 선택하세요.");
+        alert("먼저 1~4 중 하나를 선택하세요.");
         return;
       }
       handleAnswer(selectedIndex);
