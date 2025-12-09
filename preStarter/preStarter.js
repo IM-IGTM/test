@@ -12,252 +12,252 @@ window.onload = function () {
   const pictureQuestionsSeed = [
     {
       title: "반(학급)",
-      options: ["bowl", "drink", "friend", "snake", "class"],
+      options: ["bowl", "drink", "snake", "class"],
       img: "img/class.png",
     },
     {
       title: "할머니",
-      options: ["island", "leg", "day", "cup", "grandmother"],
+      options: ["island", "leg", "day", "grandmother"],
       img: "img/grandmother.png",
     },
     {
       title: "케이크",
-      options: ["sun", "sock", "mountain", "mirror", "cake"],
+      options: ["sun", "sock", "mirror", "cake"],
       img: "img/cake.png",
     },
     {
       title: "그릇",
-      options: ["night", "balloon", "skirt", "swim", "bowl"],
+      options: ["night", "skirt", "swim", "bowl"],
       img: "img/bowl.png",
     },
     {
       title: "개미",
-      options: ["mirror", "in", "favorite", "leg", "ant"],
+      options: ["mirror", "in", "leg", "ant"],
       img: "img/ant.png",
     },
     {
       title: "눈",
-      options: ["drink", "snake", "window", "birthday", "eye"],
+      options: ["drink", "snake", "birthday", "eye"],
       img: "img/eye.png",
     },
     {
       title: "느린",
-      options: ["hill", "night", "one", "grandfather", "slow"],
+      options: ["hill", "one", "grandfather", "slow"],
       img: "img/slow.png",
     },
     {
       title: "복숭아",
-      options: ["ear", "right", "white", "socks", "peach"],
+      options: ["ear", "right", "white", "peach"],
       img: "img/peach.png",
     },
     {
       title: "접시",
-      options: ["island", "cup", "in", "sun", "dish"],
+      options: ["island", "cup", "sun", "dish"],
       img: "img/dish.png",
     },
     {
       title: "가장 좋아하는",
-      options: ["leg", "balloon", "drink", "family", "favorite"],
+      options: ["leg", "drink", "family", "favorite"],
       img: "img/favorite.png",
     },
     {
       title: "학교",
-      options: ["mirror", "skirt", "birthday", "socks", "school"],
+      options: ["mirror", "skirt", "socks", "school"],
       img: "img/school.png",
     },
     {
       title: "달",
-      options: ["hot", "cup", "stop", "mirror", "moon"],
+      options: ["hot", "cup", "stop", "moon"],
       img: "img/moon.png",
     },
     {
       title: "언덕",
-      options: ["morning", "family", "right", "banana", "hill"],
+      options: ["morning", "family", "right", "hill"],
       img: "img/hill.png",
     },
     {
       title: "귀",
-      options: ["leg", "snake", "window", "one", "ear"],
+      options: ["leg", "snake", "window", "ear"],
       img: "img/ear.png",
     },
     {
       title: "뱀",
-      options: ["cup", "mirror", "hot", "birthday", "snake"],
+      options: ["cup", "mirror", "birthday", "snake"],
       img: "img/snake.png",
     },
     {
       title: "지우개",
-      options: ["back", "family", "friend", "right", "eraser"],
+      options: ["back", "family", "right", "eraser"],
       img: "img/eraser.png",
     },
     {
       title: "창문",
-      options: ["sun", "balloon", "drink", "mountain", "window"],
+      options: ["sun", "drink", "mountain", "window"],
       img: "img/window.png",
     },
     {
       title: "거울",
-      options: ["leg", "cake", "cup", "skirt", "mirror"],
+      options: ["leg", "cake", "cup", "mirror"],
       img: "img/mirror.png",
     },
     {
       title: "다리",
-      options: ["socks", "right", "swim", "day", "leg"],
+      options: ["socks", "right", "day", "leg"],
       img: "img/leg.png",
     },
     {
       title: "원숭이",
-      options: ["cup", "hot", "favorite", "snake", "monkey"],
+      options: ["cup", "hot", "snake", "monkey"],
       img: "img/monkey.png",
     },
     {
       title: "친구",
-      options: ["leg", "family", "drink", "right", "friend"],
+      options: ["leg", "family", "drink", "friend"],
       img: "img/friend.png",
     },
     {
       title: "산",
-      options: ["stop", "sun", "cup", "leg", "mountain"],
+      options: ["stop", "sun", "cup", "mountain"],
       img: "img/mountain.png",
     },
     {
       title: "수영",
-      options: ["birthday", "family", "leg", "mirror", "swim"],
+      options: ["birthday", "leg", "mirror", "swim"],
       img: "img/swim.png",
     },
     {
       title: "마시다",
-      options: ["cake", "in", "mountain", "skirt", "drink"],
+      options: ["cake", "in", "skirt", "drink"],
       img: "img/drink.png",
     },
     {
       title: "멈추다",
-      options: ["hot", "leg", "favorite", "one", "stop"],
+      options: ["hot", "leg", "one", "stop"],
       img: "img/stop.png",
     },
     {
       title: "열다",
-      options: ["sun", "window", "mountain", "right", "open"],
+      options: ["sun", "mountain", "right", "open"],
       img: "img/open.png",
     },
     {
       title: "아침",
-      options: ["cup", "mirror", "day", "snake", "morning"],
+      options: ["cup", "mirror", "snake", "morning"],
       img: "img/morning.png",
     },
     {
       title: "낮",
-      options: ["mountain", "balloon", "drink", "hot", "day"],
+      options: ["mountain", "balloon", "hot", "day"],
       img: "img/day.png",
     },
     {
       title: "섬",
-      options: ["mirror", "socks", "white", "friend", "island"],
+      options: ["mirror", "socks", "friend", "island"],
       img: "img/island.png",
     },
     {
       title: "컵",
-      options: ["birthday", "sun", "mountain", "right", "cup"],
+      options: ["birthday", "sun", "right", "cup"],
       img: "img/cup.png",
     },
     {
       title: "해",
-      options: ["in", "cake", "family", "snake", "sun"],
+      options: ["in", "cake", "snake", "sun"],
       img: "img/sun.png",
     },
     {
       title: "야구",
-      options: ["day", "favorite", "swim", "snake", "baseball"],
+      options: ["day", "favorite", "snake", "baseball"],
       img: "img/baseball.png",
     },
     {
       title: "양말",
-      options: ["mountain", "drink", "one", "mirror", "socks"],
+      options: ["mountain", "drink", "mirror", "socks"],
       img: "img/socks.png",
     },
     {
       title: "모자",
-      options: ["hot", "in", "birthday", "mirror", "hat"],
+      options: ["hot", "in", "mirror", "hat"],
       img: "img/hat.png",
     },
     {
       title: "풍선",
-      options: ["white", "family", "cup", "snake", "balloon"],
+      options: ["white", "family", "snake", "balloon"],
       img: "img/balloon.png",
     },
     {
       title: "밤",
-      options: ["mirror", "hot", "leg", "window", "night"],
+      options: ["mirror", "hot", "leg", "night"],
       img: "img/night.png",
     },
     {
       title: "흰색",
-      options: ["mountain", "drink", "friend", "birthday", "white"],
+      options: ["mountain", "drink", "birthday", "white"],
       img: "img/white.png",
     },
     {
       title: "생일",
-      options: ["cup", "socks", "ear", "sun", "birthday"],
+      options: ["cup", "socks", "ear", "birthday"],
       img: "img/birthday.png",
     },
     {
       title: "안에",
-      options: ["mountain", "cup", "sun", "mirror", "in"],
+      options: ["mountain", "cup", "mirror", "in"],
       img: "img/in.png",
     },
     {
       title: "뒷면",
-      options: ["island", "family", "leg", "cake", "back"],
+      options: ["island", "family", "cake", "back"],
       img: "img/back.png",
     },
     {
       title: "하나(일)",
-      options: ["snake", "drink", "moon", "mountain", "one"],
+      options: ["snake", "drink", "mountain", "one"],
       img: "img/one.png",
     },
     {
       title: "사용하다",
-      options: ["cup", "sun", "mirror", "birthday", "use"],
+      options: ["cup", "sun", "mirror", "use"],
       img: "img/use.png",
     },
     {
       title: "오른쪽(의)",
-      options: ["snake", "mountain", "family", "drink", "right"],
+      options: ["snake", "mountain", "family", "right"],
       img: "img/right.png",
     },
     {
       title: "보라색",
-      options: ["mirror", "skirt", "socks", "family", "purple"],
+      options: ["mirror", "skirt", "socks", "purple"],
       img: "img/purple.png",
     },
     {
       title: "아래에",
-      options: ["favorite", "mountain", "sun", "ear", "under"],
+      options: ["favorite", "mountain", "ear", "under"],
       img: "img/under.png",
     },
     {
       title: "입",
-      options: ["drink", "leg", "snake", "bowl", "mouth"],
+      options: ["drink", "leg", "bowl", "mouth"],
       img: "img/mouth.png",
     },
     {
       title: "가족",
-      options: ["mountain", "mirror", "day", "drink", "family"],
+      options: ["mountain", "mirror", "drink", "family"],
       img: "img/family.png",
     },
     {
       title: "더운",
-      options: ["cup", "leg", "mirror", "snake", "hot"],
+      options: ["cup", "leg", "mirror", "hot"],
       img: "img/hot.png",
     },
     {
       title: "할아버지",
-      options: ["sun", "mirror", "one", "snake", "grandfather"],
+      options: ["sun", "mirror", "snake", "grandfather"],
       img: "img/grandfather.png",
     },
     {
       title: "치마",
-      options: ["cup", "leg", "mountain", "morning", "skirt"],
+      options: ["cup", "leg", "morning", "skirt"],
       img: "img/skirt.png",
     },
   ];
@@ -361,7 +361,7 @@ window.onload = function () {
     let options = [kor];
     let wrong = allKorean.filter((k) => k !== kor);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -381,7 +381,7 @@ window.onload = function () {
     let options = [eng];
     let wrong = allEnglishKorSet.filter((e) => e !== eng);
     shuffle(wrong);
-    options.push(...wrong.slice(0, 4));
+    options.push(...wrong.slice(0, 3));
     shuffle(options);
 
     return {
@@ -409,7 +409,7 @@ window.onload = function () {
     tbody.innerHTML = "";
 
     const totalQuestions = questions.length;
-    const groupSize = 5;
+    const groupSize = 4;
     const groupCount = Math.ceil(totalQuestions / groupSize);
 
     for (let g = 0; g < groupCount; g++) {
@@ -461,8 +461,7 @@ window.onload = function () {
   const btn2 = document.querySelector(".two");
   const btn3 = document.querySelector(".three");
   const btn4 = document.querySelector(".four");
-  const btn5 = document.querySelector(".five");
-  const buttons = [btn1, btn2, btn3, btn4, btn5];
+  const buttons = [btn1, btn2, btn3, btn4];
 
   const timerSpan = document.getElementById("timer-sec");
 
@@ -611,7 +610,7 @@ window.onload = function () {
   // -----------------------------
   // 14. 키보드 입력 (1~5 / Space)
   // -----------------------------
-  const keyToIndex = { 1: 0, 2: 1, 3: 2, 4: 3, 5: 4 };
+  const keyToIndex = { 1: 0, 2: 1, 3: 2, 4: 3 };
 
   document.addEventListener("keydown", function (event) {
     if (currentQuestion >= questions.length) return;
@@ -619,7 +618,7 @@ window.onload = function () {
     if (event.code === "Space") {
       event.preventDefault();
       if (selectedIndex === null) {
-        alert("먼저 1~5 중 하나를 선택하세요.");
+        alert("먼저 1~4 중 하나를 선택하세요.");
         return;
       }
       handleAnswer(selectedIndex);
