@@ -110,7 +110,7 @@ window.onload = function () {
       "bring",
     ],
     ["natural ______________\n 자연 환경", "environment"],
-    ["She loooks  __________.\n 그 상자 안에는 아무것도 없다.", "thin"],
+    ["She loooks  __________.\n 그녀는 날씬해 보인다.", "thin"],
     ["a __________ city.\n 낯선 도시", "strange"],
     ["I __________ .\n 내가 약속할게", "promise"],
     ["__________ your idea.\n 너의 생각을 받아들이다.", "accept"],
