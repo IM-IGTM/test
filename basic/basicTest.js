@@ -215,7 +215,7 @@ window.onload = function () {
       "The house with _______ was built in 1970.\n굴뚝이 있는 그 집은 1970년에 지어졌다.",
       "chimney",
     ],
-    ["I need to buy a new _______ .\n수영장에서 나가 주세요.", "pillow"],
+    ["Get out of the _______.\n수영장에서 나가 주세요.", "pool"],
   ];
 
   const allSentAnswers = sentencePairs.map(([, ans]) => ans);
